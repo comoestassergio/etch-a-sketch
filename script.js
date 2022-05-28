@@ -4,6 +4,8 @@ const resetBtn = document.querySelector(".reset")
 const welcome = document.querySelector(".welcome")
 const root = document.documentElement
 
+let rgbaColor = "rgba(102, 102, 102, 1)"
+
 function createDivs(divCount){
     for (let i=0; i<divCount; i++) {
         const div = document.createElement("div")
@@ -15,7 +17,8 @@ function createDivs(divCount){
 
     squares.forEach(square => {
         square.addEventListener("mouseover", function(){
-            square.classList.add("active")
+            console.log(rgbaColor)
+            square.style.background = `${rgbaColor}`
         })
     })
 
@@ -27,12 +30,11 @@ function createDivs(divCount){
 }
 
 startBtn.addEventListener("click", function(){
-    let gridSize = prompt("Enter grid size:", "55")
+    let gridSize = prompt("Enter grid size:", "25")
     if (gridSize <= 100) {
         welcome.style.display = "none"
         root.style.setProperty("--grid-size", gridSize)
         createDivs(gridSize**2)
-        alert("Grid ready!")
     } else {
         alert("That's way too big!")
     }
@@ -73,12 +75,12 @@ const pickr = Pickr.create({
             hex: true,
             rgba: true,
             input: true,
+            save: true
         }
     }
 });
 
 pickr.on("change", (color, instance)=> {
-    let rgbaColor = color.toRGBA().toString()
+    rgbaColor = color.toRGBA().toString()
     root.style.setProperty("--draw-color", rgbaColor)
-    console.log(root.style.getPropertyValue("--draw-color"))
 })
