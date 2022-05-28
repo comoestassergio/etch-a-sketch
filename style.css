@@ -19,8 +19,8 @@ html, body {
     display: grid;
     justify-content: center;
     grid-template: repeat(var(--grid-size), 1fr) / repeat(var(--grid-size), 1fr);
-    width: 600px;
-    height: 600px;
+    width: 500px;
+    height: 500px;
 
     border: 1px solid #777;
 
@@ -111,4 +111,70 @@ html, body {
 .colorpicker-label {
     font-size: 1.5rem;
     color:#555;
+}
+
+footer {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 15rem;
+}
+
+/* Media Queries */
+@media (max-width: 700px){
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    
+        gap: 2em;
+    
+        margin: 2em 5em 0em;
+    }
+
+    .buttons {
+        gap: 4em;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 450px;
+        height: 450px;
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        width: 400px;
+        height: 400px;
+    }
+
+    .main {
+        margin-top: 3rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .container {
+        width: 320px;
+        height: 320px;
+    }
+}
+
+@media (max-width: 375px) {
+    .btn {
+        font-size: 1.4rem;
+    }
+    .container {
+        width: 300px;
+        height: 300px;
+    }
+    .main {
+        margin-top: 2rem;
+    }
+
+    footer {
+        font-size: 1em;
+        margin-top: 6rem;
+    }
 }
