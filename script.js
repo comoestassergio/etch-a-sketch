@@ -24,7 +24,7 @@ function createDivs(divCount){
 
     resetBtn.addEventListener("click", function(){
         squares.forEach(square => {
-            square.classList.remove("active")
+            square.style.background = "#fff"
         })
     })
 }
