@@ -113,11 +113,8 @@ html, body {
     color:#555;
 }
 
-footer {
-    text-align: center;
-    font-size: 1.2rem;
-    color: #666;
-    margin-top: 15rem;
+.square {
+    transition: background-color 100ms ease-in;
 }
 
 /* Media Queries */
