@@ -6,6 +6,11 @@ const root = document.documentElement
 
 let rgbaColor = "rgba(102, 102, 102, 1)"
 
+let mouseDown = false
+
+document.body.onmousedown = () => (mouseDown = true)
+document.body.onmouseup = () => (mouseDown = false)
+
 function createDivs(divCount){
     for (let i=0; i<divCount; i++) {
         const div = document.createElement("div")
@@ -17,10 +22,14 @@ function createDivs(divCount){
 
     squares.forEach(square => {
         square.addEventListener("mouseover", function(){
-            console.log(rgbaColor)
-            square.style.background = `${rgbaColor}`
+            if(mouseDown === true){
+                square.style.background = `${rgbaColor}`
+            } else {
+                return
+            }
         })
-    })
+        }
+    )
 
     resetBtn.addEventListener("click", function(){
         squares.forEach(square => {
