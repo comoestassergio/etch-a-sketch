@@ -13,6 +13,8 @@ html, body {
     padding: 0;
 
     overflow: hidden;
+
+    user-select: none;
 }
 
 .container {
@@ -130,6 +132,7 @@ html, body {
 
     .buttons {
         gap: 4em;
+        color: black;
     }
 }
 
