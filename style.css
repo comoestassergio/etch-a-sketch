@@ -131,7 +131,7 @@ html, body {
     }
 
     .buttons {
-        gap: 4em;
+        gap: 2.5em;
         color: black;
     }
 }
@@ -163,7 +163,7 @@ html, body {
 
 @media (max-width: 375px) {
     .btn {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
     }
     .container {
         width: 300px;
@@ -173,8 +173,7 @@ html, body {
         margin-top: 2rem;
     }
 
-    footer {
-        font-size: 1em;
-        margin-top: 6rem;
+    .logo {
+        font-size: 1.5rem;
     }
 }
