@@ -31,6 +31,13 @@ function createDivs(divCount){
         }
     )
 
+    /* for mobile  */
+    squares.forEach(square => {
+        square.addEventListener("pointerdown", function(){
+            square.style.background = `${rgbaColor}`
+        })
+    })
+
     resetBtn.addEventListener("click", function(){
         squares.forEach(square => {
             square.style.background = "#fff"
