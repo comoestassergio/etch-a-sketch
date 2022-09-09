@@ -1,11 +1,11 @@
-# etch-a-sketch
+# Etch-A-Sketch
 
-Hello there!
+This project is a little **etch-a-sketch thingy**. 
 
-This project is a little etch-a-sketch thingy. 
-You can select the size of the grid you want to draw on.
-As well as pick any colour you fancy.
+You can select the **size** of the **grid** you want to **draw** on.
+As well as **pick any colour** you fancy!
 
-Enjoy!
+**Enjoy!**
 
-Favicon taken from: https://www.flaticon.com/free-icons/edit
+### Favicon taken from: 
+- https://www.flaticon.com/free-icons/edit
